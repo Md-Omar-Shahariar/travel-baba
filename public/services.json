@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "Chola Bhatura",
+        "price": "300",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/g9Z7Mwm/chola.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Sahi Nihari",
+        "price": "700",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/RTJSgGy/nihari.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Panir Masala",
+        "price": "450",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/LJ5W1pr/panirmasala.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Panir Butter",
+        "price": "500",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/zFgbWBH/panirpudina.jpg"
+    }
+    
+]
