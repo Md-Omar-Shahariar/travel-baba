@@ -10,7 +10,7 @@ const Header = () => {
       collapseOnSelect
       expand="lg"
       bg="black"
-      variant="light"
+      variant="dark"
     >
       <Container>
         <Navbar.Brand className="fw-bold" as={CustomLink} to={"/home"}>
@@ -19,11 +19,18 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto fw-bold">
-            <Nav.Link as={CustomLink} to={"/feature"}>
-              Features
+            <Nav.Link as={CustomLink} to={"/services"}>
+              Services
+            </Nav.Link>
+
+            <Nav.Link as={CustomLink} to={"/about"}>
+              About
             </Nav.Link>
             <Nav.Link as={CustomLink} to={"/blog"}>
-              Pricing
+              Blog
+            </Nav.Link>
+            <Nav.Link as={CustomLink} to={"/login"}>
+              Login
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
