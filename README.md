@@ -10,4 +10,8 @@
 [Live Link](https://desi-dhaba-12e5d.web.app/)
 
 * Project Description
-** user can log in with email / google/ github/ facebook 
+  * User can log in with email / google/ github/ facebook 
+  * If user want to hire then first has to login
+  * After login redirect to previous page
+  * added reset password module
+  * used toast to show reset password notification
