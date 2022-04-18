@@ -1,24 +1,34 @@
 import React from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 import "./Login.css";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    navigate("/register");
+  };
+  let errorMessage;
+  if (!user) {
+    errorMessage = <p>{error?.message}</p>;
+  }
   const emailRef = useRef("");
+
   const passwordRef = useRef("");
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email, password);
+    signInWithEmailAndPassword(email, password);
   };
   return (
-    <div className="mt-5 ">
+    <div className="my-5 ">
       <Form className="w-50 m-auto form">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -50,9 +60,15 @@ const Login = () => {
         >
           Log-In
         </button>
+        {errorMessage}
         <p className="mt-3 text-center">
           Don't Have an Account?
-          <span className="btn btn-link text-decoration-none ">Register</span>
+          <span
+            onClick={handleRegister}
+            className="btn btn-link text-decoration-none "
+          >
+            Register
+          </span>
         </p>
         <p className="mt-3 text-center">
           Forget Password?
@@ -60,6 +76,7 @@ const Login = () => {
             Reset Password
           </span>
         </p>
+
         <SocialLogin></SocialLogin>
       </Form>
     </div>
