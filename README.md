@@ -9,9 +9,16 @@
 
 [Live Link](https://desi-dhaba-12e5d.web.app/)
 
-* Project Description
+### Project Description
   * User can log in with email / google/ github/ facebook 
   * If user want to hire then first has to login
   * After login redirect to previous page
   * added reset password module
   * used toast to show reset password notification
+
+### list of technoligies
+  * Firebase
+  * React bootstrap
+  * React
+  * React-firebase-hooks
+
