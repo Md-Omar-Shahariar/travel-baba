@@ -12,7 +12,7 @@ const Service = ({ service }) => {
     <div className="service mt-5">
       <img src={img} className="w-100" alt="" />
       <h2>{name}</h2>
-      <p>Price: {price}</p>
+      <h5 className="text-warning">$ {price}</h5>
       <p>
         <small>{description}</small>
       </p>

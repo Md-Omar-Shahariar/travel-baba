@@ -1,31 +1,31 @@
 [
     {
         "id": 1,
-        "name": "Chola Bhatura",
+        "name": "Single Day",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/g9Z7Mwm/chola.jpg"
+        "img": "https://i.ibb.co/NZQkZ6r/pexels-chanaka-madushan-sugathadasa-999068.jpg"
     },
     {
         "id": 2,
-        "name": "Sahi Nihari",
+        "name": "3 Days",
         "price": "700",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/RTJSgGy/nihari.jpg"
+        "img": "https://i.ibb.co/Mp25yVN/pexels-malte-luk-2432299.jpg"
     },
     {
         "id": 3,
-        "name": "Panir Masala",
+        "name": "7 Days",
         "price": "450",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/LJ5W1pr/panirmasala.jpg"
+        "img": "https://i.ibb.co/mC4y1Hs/pexels-th-nh-tr-n-3788363.jpg"
     },
     {
         "id": 4,
-        "name": "Panir Butter",
+        "name": "Platinum",
         "price": "500",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/zFgbWBH/panirpudina.jpg"
+        "img": "https://i.ibb.co/zNK63y3/pexels-v-o-y-t-a-2928116.jpg"
     }
     
 ]

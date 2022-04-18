@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import img1 from "../../image/banner/jill-heyer-toxlLueLNDs-unsplash.jpg";
-import img2 from "../../image/banner/vegetables-set-left-black-slate.jpg";
-import img3 from "../../image/banner/roasted-pork-steak-dark-wooden-surface.jpg";
+import img1 from "../../image/banner/img1.jpg";
+import img2 from "../../image/banner/img2.jpg";
+import img3 from "../../image/banner/img3.jpg";
 import "./Banner.css";
 
 const Banner = () => {
@@ -11,13 +11,14 @@ const Banner = () => {
       <Carousel fade>
         <Carousel.Item>
           <img className="d-block w-100" src={img1} alt="First slide" />
-          <Carousel.Caption className="top-0 mt-5">
-            <h1 className="font-style">
-              Bringing You The Original Taste of Home
-            </h1>
+          <Carousel.Caption className="">
+            <p className="fs-1">
+              The most beautiful thing in the world is, of course, the world
+              itself
+            </p>
             <p>
               <span className="font-style">
-                Serving The Premium Taste of Mughals is Our Moto
+                Let's become the witness of this beauty
               </span>
             </p>
           </Carousel.Caption>
@@ -25,27 +26,27 @@ const Banner = () => {
         <Carousel.Item>
           <img className="d-block w-100" src={img2} alt="Second slide" />
 
-          <Carousel.Caption className="top-0 mt-5">
-            <h1 className="font-style">
-              Bringing You The Original Taste of Home
-            </h1>
+          <Carousel.Caption className="">
+            <p className="fs-1">
+              The most beautiful thing in the world is, of course, the world
+              itself
+            </p>
             <p>
-              <span className="font-style">
-                Serving The Premium Taste of Mughals is Our Moto
-              </span>
+              <span className="">Let's become the witness of this beauty</span>
             </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={img3} alt="Third slide" />
 
-          <Carousel.Caption className="top-0 mt-5">
-            <h1 className="font-style">
-              Bringing You The Original Taste of Home
-            </h1>
+          <Carousel.Caption className="">
+            <p className="fs-1 text-warning">
+              The most beautiful thing in the world is, of course, the world
+              itself
+            </p>
             <p>
               <span className="font-style">
-                Serving The Premium Taste of Mughals is Our Moto
+                Let's become the witness of this beauty
               </span>
             </p>
           </Carousel.Caption>
