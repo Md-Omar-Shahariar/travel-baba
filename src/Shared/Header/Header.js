@@ -23,7 +23,10 @@ const Header = () => {
         <Navbar.Brand className="fw-bold" as={CustomLink} to={"/home"}>
           <span className="brand-name">Travel Baba</span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle
+          className="text-warning"
+          aria-controls="responsive-navbar-nav"
+        />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto fw-bold">
             <Nav.Link as={CustomLink} to={"home#services"}>
@@ -38,7 +41,7 @@ const Header = () => {
             </Nav.Link>
             {user ? (
               <button
-                className="btn btn-warning h-50 my-auto"
+                className="btn btn-warning h-50 my-auto fw-bold"
                 onClick={handleSignOut}
               >
                 Sign-Out

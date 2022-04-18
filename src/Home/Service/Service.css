@@ -20,4 +20,5 @@ img{
 }
 .btn-effect:hover{
     background-color: goldenrod;
+    color: antiquewhite;
 }

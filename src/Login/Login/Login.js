@@ -4,10 +4,17 @@ import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 import "./Login.css";
 import { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
+import { ToastContainer, toast } from "react-toastify";
+
 const Login = () => {
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -15,6 +22,9 @@ const Login = () => {
     navigate("/register");
   };
   let errorMessage;
+  if (error) {
+    errorMessage = <p>{error?.message}</p>;
+  }
   if (!user) {
     errorMessage = <p>{error?.message}</p>;
   }
@@ -24,6 +34,16 @@ const Login = () => {
 
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    console.log(email);
+    if (email) {
+      toast("Sent email");
+    } else {
+      toast("Please enter email address");
+    }
+  };
   if (user) {
     navigate(from, { replace: true });
   }
@@ -33,9 +53,11 @@ const Login = () => {
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
   };
+
   return (
     <div className="my-5 ">
       <Form className="w-50 m-auto form">
+        <ToastContainer></ToastContainer>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -78,7 +100,10 @@ const Login = () => {
         </p>
         <p className="mt-3 text-center">
           Forget Password?
-          <span className="btn btn-link text-decoration-none ">
+          <span
+            onClick={resetPassword}
+            className="btn btn-link text-decoration-none "
+          >
             Reset Password
           </span>
         </p>

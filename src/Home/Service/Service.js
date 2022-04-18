@@ -14,13 +14,13 @@ const Service = ({ service }) => {
       <h2>{name}</h2>
       <h5 className="text-warning">$ {price}</h5>
       <p>
-        <small>{description}</small>
+        <small>{description.slice(0, 100)}...</small>
       </p>
       <button
         className="btn btn-effect"
         onClick={() => navigateToServiceDetail(id)}
       >
-        Book: {name}
+        HIRE ME
       </button>
     </div>
   );
