@@ -10,8 +10,10 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
+  const navigate = useNavigate();
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const [signInWithFacebook, Facebookuser, facebookLoading, facebookError] =
     useSignInWithFacebook(auth);
@@ -27,6 +29,9 @@ const SocialLogin = () => {
   const handleSignInWithFacebook = () => {
     signInWithFacebook();
   };
+  if (user || Facebookuser || gitUser) {
+    navigate("/home");
+  }
 
   let errorElement;
   if (error || gitError || facebookError) {
